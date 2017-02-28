@@ -115,8 +115,7 @@ public class MainActivity extends AppCompatActivity {
         if(id==R.id.action_share){
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
-            String shareBody = "Here is the share content body";
-            sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+            sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Shopping List");
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shoppingList.toString());
             startActivity(Intent.createChooser(sharingIntent, "Share via"));
         }
